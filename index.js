@@ -1,12 +1,11 @@
+require("dotenv").config();
 const app = require("express")();
 const mongoose = require("mongoose");
 const category = require("./routes/category");
 const product = require("./routes/product");
-const PORT = 8080 | process.env.PORT;
+const PORT = process.env.PORT || 8080;
 
-mongoose.connect(
-  "mongodb+srv://user007:stevejobs21@mydb.fxuqi.mongodb.net/?retryWrites=true&w=majority"
-);
+mongoose.connect(process.env.MONGO_DB_URL);
 
 mongoose.connection.once("open", () => {
   console.log("Connected successfully!");
