@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  fullname: {
+  name: {
     type: String,
     required: true,
   },
@@ -19,6 +19,9 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
+  },
+  token: {
+    type: String,
   },
 });
 

@@ -1,0 +1,27 @@
+GET http://localhost:8000/user/view
+Content-Type: application/json
+
+{
+	"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjJiNmYzZTA4Yzc4ZWRlMTQ4ZDlhN2Q1IiwidXNlcm5hbWUiOiJpc2hpdHdhMjAwMCIsImlhdCI6MTY1NjE1ODE3NywiZXhwIjoxNjU2MTY1Mzc3fQ.oXenoo_hKvkgEun9gPRx95xdFmdYANzbCC3ONrUkBXg"
+}
+
+###
+
+POST http://localhost:8000/user/signup
+Content-Type: application/json
+
+{
+	"name":"Ishitwa Agrawal",
+	"username":"ishitwa2000",
+	"email":"ishitwa2000@gmail.com",
+	"password":"stevejobs21"
+}
+
+###
+POST http://localhost:8000/user/login
+Content-Type: application/json
+
+{
+	"username":"ishitwa2000",
+	"password":"stevejobs21"
+}

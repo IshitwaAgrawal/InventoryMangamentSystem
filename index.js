@@ -3,6 +3,7 @@ const app = require("express")();
 const mongoose = require("mongoose");
 const category = require("./routes/category");
 const product = require("./routes/product");
+const user = require("./routes/user");
 const PORT = process.env.PORT || 8080;
 
 mongoose.connect(process.env.MONGO_DB_URL);
@@ -13,5 +14,6 @@ mongoose.connection.once("open", () => {
 
 app.use("/category", category);
 app.use("/product", product);
+app.use("/user", user);
 
 app.listen(PORT, () => console.log(`Server is up,\nport -> ${PORT}`));
